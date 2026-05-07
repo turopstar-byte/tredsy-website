@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Tredsy</title>
+  <meta name="description" content="How Tredsy collects, uses, and protects your data." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="/">Tredsy</a>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Effective date: 8 May 2026 · Last updated: 8 May 2026</p>
+
+    <p>
+      This Privacy Policy explains how Tredsy ("Tredsy", "we", "our") collects,
+      uses, and protects information when you use the Tredsy iOS application
+      and the related services at <a href="https://tredsy.com">tredsy.com</a>
+      (the "Service"). We've tried to write it in plain English. If anything is
+      unclear, email us at
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a>.
+    </p>
+
+    <h2>1. Who is the data controller</h2>
+    <p>
+      The data controller is the individual entrepreneur (Ukrainian: ФОП)
+      <strong>Yaroslav Kira</strong>, registered in Ukraine and operating from
+      Lviv, Shevchenka St. 372. You can reach the controller at
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a> for any
+      privacy-related question or to exercise your rights under the GDPR.
+    </p>
+
+    <h2>2. What data we process</h2>
+    <p>We only process the minimum needed to run the Service:</p>
+    <ul>
+      <li>
+        <strong>Threads profile data</strong> — your numeric Threads user id
+        and username. Received from Meta during the OAuth sign-in flow so we
+        know which account a post belongs to.
+      </li>
+      <li>
+        <strong>Threads access token</strong> — issued by Meta after you
+        authorise Tredsy. Stored encrypted at rest using AES-256-GCM with a
+        per-row initialisation vector. Used only to publish on your behalf.
+      </li>
+      <li>
+        <strong>Post content you create</strong> — text, scheduled time,
+        first-comment text, status (draft / scheduled / published / failed),
+        and timestamps.
+      </li>
+      <li>
+        <strong>Media you upload</strong> — images and videos attached to a
+        post. Stored on Cloudflare R2 in the EU until the post or your account
+        is deleted.
+      </li>
+      <li>
+        <strong>Server logs</strong> — IP address, User-Agent, request path,
+        and error stack traces. Used for debugging, abuse prevention, and
+        security. Retained for up to 7 days, then rotated by our hosting
+        provider.
+      </li>
+    </ul>
+
+    <p>
+      We do <strong>not</strong> ask for or collect: your email password, bank
+      details, contacts list, photo library beyond the items you explicitly
+      attach to a post, location, microphone, or any health data.
+    </p>
+
+    <h2>3. Why we process it (legal basis)</h2>
+    <ul>
+      <li>
+        <strong>Performance of contract (GDPR Art. 6(1)(b))</strong> — when
+        you sign in with Threads, you ask us to schedule and publish posts on
+        your behalf. Processing the data above is necessary to deliver that.
+      </li>
+      <li>
+        <strong>Legitimate interest (GDPR Art. 6(1)(f))</strong> — for server
+        logs and abuse prevention, balanced against your reasonable
+        expectations of a hosted service.
+      </li>
+    </ul>
+
+    <h2>4. Where data lives</h2>
+    <ul>
+      <li>
+        Application database — managed PostgreSQL on Render, hosted in
+        Frankfurt, Germany (EU).
+      </li>
+      <li>Media storage — Cloudflare R2, EU region.</li>
+      <li>
+        DNS and TLS termination — Cloudflare (operates a global network; the
+        backend origin remains in Frankfurt).
+      </li>
+    </ul>
+    <p>
+      Data does not leave the EU/EEA in the ordinary course of operating the
+      Service. The Threads API itself is operated by Meta Platforms; when you
+      publish a post, the content is sent to Meta's infrastructure, which may
+      operate globally. That's a direct consequence of using Threads, not of
+      using Tredsy.
+    </p>
+
+    <h2>5. Who else sees the data</h2>
+    <p>
+      We use a small number of processors who handle data on our behalf under
+      contractual obligations consistent with the GDPR:
+    </p>
+    <ul>
+      <li>
+        <strong>Meta Platforms, Inc.</strong> — receives post text and media
+        when you publish. Subject to Meta's own privacy policy and the
+        Threads platform terms.
+      </li>
+      <li>
+        <strong>Render Services, Inc.</strong> — hosts the application server
+        and database.
+      </li>
+      <li>
+        <strong>Cloudflare, Inc.</strong> — provides DNS, TLS, and R2 object
+        storage.
+      </li>
+    </ul>
+    <p>
+      We do <strong>not</strong> sell your data, and we do <strong>not</strong>
+      share it with advertisers, data brokers, or analytics networks beyond
+      what is described here.
+    </p>
+
+    <h2>6. How long we keep it</h2>
+    <ul>
+      <li>
+        Account and Threads connection — until you delete your account or
+        disconnect the Threads account from Tredsy.
+      </li>
+      <li>
+        Posts and uploaded media — until the post is deleted from Tredsy or
+        your account is deleted.
+      </li>
+      <li>
+        Server logs — up to 7 days, after which they are rotated and
+        overwritten by the hosting provider.
+      </li>
+      <li>
+        Database backups — encrypted backups are retained by our hosting
+        provider for up to 30 days for disaster recovery, then deleted.
+      </li>
+    </ul>
+
+    <h2>7. Security</h2>
+    <ul>
+      <li>All traffic in transit uses TLS 1.2 or higher.</li>
+      <li>Threads access tokens are encrypted at rest with AES-256-GCM.</li>
+      <li>
+        Authentication uses short-lived JSON Web Tokens scoped to your user.
+      </li>
+      <li>
+        Access to the production environment is limited to the data
+        controller and is protected by hardware-backed multi-factor
+        authentication.
+      </li>
+    </ul>
+    <p>
+      No system is perfectly secure. If we ever discover a personal data
+      breach affecting you, we will notify you and the relevant supervisory
+      authority within 72 hours, as required by GDPR Art. 33–34.
+    </p>
+
+    <h2>8. Your rights</h2>
+    <p>
+      Under the GDPR (and equivalent local laws), you have the right to:
+    </p>
+    <ul>
+      <li>
+        Access the personal data we hold about you (Art. 15) and receive a
+        copy in a portable format (Art. 20).
+      </li>
+      <li>
+        Ask us to correct inaccurate data (Art. 16) or delete it (Art. 17 —
+        "right to be forgotten").
+      </li>
+      <li>
+        Restrict or object to certain processing (Art. 18, 21).
+      </li>
+      <li>
+        Withdraw consent at any time (where consent is the legal basis), by
+        disconnecting Threads from within the app or by emailing us.
+      </li>
+      <li>
+        Lodge a complaint with a data protection authority. In Ukraine, the
+        Ukrainian Parliament Commissioner for Human Rights. In the EU, the
+        authority of your country of residence.
+      </li>
+    </ul>
+    <p>
+      To exercise any of these rights, email
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a> from the
+      address associated with your account. We will respond within 30 days.
+    </p>
+
+    <h2>9. Deleting your data</h2>
+    <p>
+      The fastest way to delete everything is from inside the app: open
+      <em>Settings → Delete account</em>. This removes your user record, all
+      posts, all uploaded media (including from R2), and revokes your Threads
+      session on our side. For a step-by-step walkthrough see our
+      <a href="/delete.html">Data deletion instructions</a>.
+    </p>
+
+    <h2>10. Children</h2>
+    <p>
+      Tredsy is not directed at children under 13 (or under 16 in
+      jurisdictions where that is the minimum age for online consent). We do
+      not knowingly collect personal data from children. If you believe a
+      child has registered, please contact us and we will delete the account.
+    </p>
+
+    <h2>11. Analytics, push notifications, and crash reports</h2>
+    <p>
+      Tredsy does not currently use third-party analytics, advertising SDKs,
+      or push notifications. If we add any of these in the future (for
+      example, anonymous crash reporting via Sentry, or push notifications
+      for scheduled-post failures), we will update this policy and notify
+      users in-app at least 30 days before the change takes effect.
+    </p>
+
+    <h2>12. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. Material changes
+      will be highlighted at the top of this page and announced in the app
+      30 days before they take effect. The "Last updated" date above always
+      reflects the current version.
+    </p>
+
+    <h2>13. Contact</h2>
+    <p>
+      For any privacy-related question, including GDPR rights requests:
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a>.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete data</a>
+        <a href="mailto:support@tredsy.com">Support</a>
+      </div>
+      <div>© Tredsy 2026</div>
+    </div>
+  </footer>
+</body>
+</html>

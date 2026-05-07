@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delete your data — Tredsy</title>
+  <meta name="description" content="How to delete your Tredsy account and all associated data." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="/">Tredsy</a>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Delete your data</h1>
+    <p class="lead">
+      You can delete your Tredsy account and everything associated with it
+      at any time. Here's how — and what gets removed.
+    </p>
+
+    <h2>Option 1 — Delete from inside the app (recommended)</h2>
+    <ol>
+      <li>Open Tredsy on your iPhone.</li>
+      <li>Go to <strong>Settings</strong> (gear icon, top-right of the Posts tab).</li>
+      <li>Tap <strong>Delete account</strong>.</li>
+      <li>Confirm the deletion when prompted.</li>
+    </ol>
+    <p>
+      The account, all your posts (drafts, scheduled, and published
+      history), all uploaded media (including files in our object storage),
+      and your stored Threads access token are removed immediately.
+    </p>
+
+    <h2>Option 2 — Email us</h2>
+    <p>
+      If you've lost access to the app (for example, you've deleted it
+      already without deleting the account first), email
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a> from the
+      address tied to your Threads account, with the subject
+      "Delete my Tredsy data". We will:
+    </p>
+    <ul>
+      <li>Confirm your identity (we may ask for the Threads username and approximate sign-up date).</li>
+      <li>Delete your records and respond within 30 days, usually faster.</li>
+    </ul>
+
+    <h2>Option 3 — Revoke access from Threads</h2>
+    <p>
+      You can also remove Tredsy's access to your Threads account on the
+      Threads side:
+    </p>
+    <ol>
+      <li>Open the Threads app or threads.net.</li>
+      <li>Go to your profile → <em>Settings → Account → Linked accounts → Apps and websites</em>.</li>
+      <li>Find Tredsy in the list and tap <em>Remove</em>.</li>
+    </ol>
+    <p>
+      Meta will notify our backend and we will automatically clear the
+      stored access token for that Threads account. Your account record on
+      Tredsy stays in place (so historical posts remain visible) until you
+      explicitly delete the account using Option 1 or 2.
+    </p>
+
+    <h2>What gets deleted</h2>
+    <ul>
+      <li>Your user record and authentication data.</li>
+      <li>All posts: drafts, scheduled, published history.</li>
+      <li>All uploaded media files in our Cloudflare R2 storage.</li>
+      <li>Your encrypted Threads access token and connection metadata.</li>
+    </ul>
+
+    <h2>What may stick around briefly</h2>
+    <ul>
+      <li>
+        Encrypted database backups for up to 30 days. They are not
+        accessible to humans and rotate automatically.
+      </li>
+      <li>
+        Server logs for up to 7 days, which may contain your IP address but
+        no post content. They are rotated by our hosting provider.
+      </li>
+    </ul>
+
+    <h2>Posts already published to Threads</h2>
+    <p>
+      Deleting your Tredsy account does <strong>not</strong> delete the
+      posts that have already gone live on Threads — those belong to
+      Threads now. To remove them, delete the posts directly inside the
+      Threads app.
+    </p>
+
+    <div class="callout">
+      <strong>Need help?</strong> If anything is unclear or the in-app
+      delete button isn't working, write to
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a> and we'll
+      sort it out manually.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete data</a>
+        <a href="mailto:support@tredsy.com">Support</a>
+      </div>
+      <div>© Tredsy 2026</div>
+    </div>
+  </footer>
+</body>
+</html>
