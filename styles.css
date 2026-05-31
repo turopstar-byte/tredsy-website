@@ -215,6 +215,10 @@ footer.site-footer a:hover { color: var(--text); }
   color: var(--landing-muted);
 }
 
+.landing-page .site-header nav a:hover {
+  color: var(--landing-ink);
+}
+
 .language-switch {
   display: inline-flex;
   gap: 3px;
