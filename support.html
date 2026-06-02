@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Tredsy</title>
+  <meta name="description" content="Get help with your Tredsy account, scheduled posts, and Threads connection." />
+  <link rel="icon" type="image/png" href="/assets/tredsy-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/tredsy-app-icon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="/">Tredsy</a>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete data</a>
+        <a href="/support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Support</h1>
+    <p class="lead">
+      Need help with your Tredsy account, a scheduled post that didn't go
+      live, or connecting your Threads account? Write to us — a real
+      person reads every message.
+    </p>
+
+    <div class="callout">
+      <strong>Contact:</strong>
+      <a href="mailto:support@tredsy.com">support@tredsy.com</a><br />
+      <strong>Response time:</strong> within 2 business days, usually
+      faster. Replies are sent from the same address.
+    </div>
+
+    <h2>Before you write — quick answers</h2>
+
+    <h3>My scheduled post didn't publish</h3>
+    <p>
+      Open the post in Tredsy: the status badge tells you what happened.
+    </p>
+    <ul>
+      <li>
+        <strong>Failed</strong> — Threads rejected the post (usually
+        expired access token or a content rule). Reconnect your Threads
+        account in <em>Settings → Threads account</em> and tap
+        <em>Retry</em> on the post.
+      </li>
+      <li>
+        <strong>Publishing</strong> for more than a few minutes — Threads
+        is rate-limiting us. The next worker run will retry automatically;
+        no action needed.
+      </li>
+      <li>
+        <strong>Still says Scheduled</strong> after the planned time —
+        write to us with the post's planned time and Threads username so
+        we can look at the logs.
+      </li>
+    </ul>
+
+    <h3>I can't connect my Threads account</h3>
+    <p>
+      Make sure you're logging in to the same Threads account you want to
+      publish from. If the OAuth window closes without completing, your
+      Threads account may not have API access enabled yet — Meta is
+      rolling this out gradually. Try again in a few days, or
+      <a href="mailto:support@tredsy.com">tell us your Threads username</a>
+      and we'll check.
+    </p>
+
+    <h3>How do I delete my account?</h3>
+    <p>
+      In-app: <em>Settings → Delete account</em>. Full instructions
+      and what gets removed are on the
+      <a href="/delete.html">data deletion page</a>.
+    </p>
+
+    <h3>How much does Tredsy cost?</h3>
+    <p>
+      Tredsy is currently free while in active development. If a paid
+      plan launches in the future, anyone who signed up before it will
+      keep using the current feature set free of charge.
+    </p>
+
+    <h3>Can I export my drafts and scheduled posts?</h3>
+    <p>
+      Yes. Email us from the address tied to your Threads account with
+      the subject "Export my Tredsy data" — we'll send a JSON dump of
+      your posts and media URLs within 30 days (usually within a week).
+    </p>
+
+    <h3>I found a bug / have a feature idea</h3>
+    <p>
+      Write to <a href="mailto:support@tredsy.com">support@tredsy.com</a>
+      with a short description and, if possible, a screenshot or
+      screen recording. We log every report and reply when the fix
+      ships.
+    </p>
+
+    <h2>Service status</h2>
+    <p>
+      If Tredsy itself seems down (login fails for everyone, the
+      calendar won't load), check
+      <a href="https://api.tredsy.com/api/health">api.tredsy.com/api/health</a>.
+      A green <code>{"status":"ok"}</code> response means the backend is
+      up — the problem is likely on the Threads side. If it's red or
+      unreachable, we are already on it; sit tight or write to us for
+      an ETA.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <div>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete data</a>
+        <a href="/support.html">Support</a>
+      </div>
+      <div>© Tredsy 2026</div>
+    </div>
+  </footer>
+</body>
+</html>
