@@ -32,17 +32,6 @@ const translations = {
     "hero.cta": "Незабаром в App Store",
     "hero.support": "Написати в підтримку →",
 
-    "mock.workspace": "Простір",
-    "mock.plan": "План на червень",
-    "mock.ready": "Готово",
-    "mock.scheduled": "Заплановано",
-    "mock.published": "Опубліковано",
-    "mock.draft": "Чернетка",
-    "mock.post": "Три нотатки про спокійніший процес публікації в Threads…",
-    "mock.next": "Далі",
-    "mock.count": "2 пости",
-    "mock.post2": "Нотатки про продукт на тиждень",
-
     "how.eyebrow": "Чистіший процес публікації",
     "how.title": "Одне місце для постів, які ще не готові вийти.",
     "how.lead":
