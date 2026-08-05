@@ -358,35 +358,48 @@ code {
    Landing: device mockup
    ───────────────────────────────────────────── */
 
-/* Aspect ratio tracks the screenshot itself, so the phone frame hugs the
-   real capture instead of cropping it. */
+/* No fixed aspect ratio: the frame's height comes from the screenshot
+   inside it, so the capture is never cropped no matter its dimensions. */
 .device {
   justify-self: center;
-  width: 300px;
-  max-width: 84vw;
-  aspect-ratio: 720 / 1565;
-  padding: 12px;
-  border-radius: 44px;
+  width: 250px;
+  max-width: 72vw;
+  padding: 10px;
+  border-radius: 38px;
   border: 1px solid #34343e;
   background: linear-gradient(160deg, #26262e, #101014);
   box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.8),
     0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+  /* Slight 3D tilt so the device reads as an object in space rather than
+     a flat cut-out. Kept shallow — past ~12deg the screen text starts to
+     smear and the whole thing looks like a stock template. */
+  transform: perspective(1400px) rotateY(-11deg) rotateX(3deg) rotate(-1.5deg);
 }
 
 .device-screen {
-  width: 100%;
-  height: 100%;
-  border-radius: 34px;
+  border-radius: 29px;
   border: 1px solid #22222a;
   background: #0b0b0f;
   overflow: hidden;
+  /* Kills the baseline gap under the inline image. */
+  line-height: 0;
 }
 
 .device-screen img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+}
+
+/* Must sit after `.device` itself: an override of the same specificity
+   placed earlier in the file loses to the base rule. Once the device is
+   centred under the copy the tilt reads as a mistake rather than a
+   composition, and a smaller frame keeps the hero from running long. */
+@media (max-width: 860px) {
+  .device {
+    width: 210px;
+    transform: none;
+  }
 }
 
 /* ─────────────────────────────────────────────
