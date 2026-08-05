@@ -1,67 +1,98 @@
+/*
+  Language switch for tredsy.com.
+
+  English lives in the markup and acts as the fallback; this file only
+  carries the Ukrainian overrides plus the per-language <title> and
+  meta description. Keys map to `data-i18n` attributes.
+*/
+
 const translations = {
   en: {
     title: "Tredsy - Schedule and publish to Threads",
-    description: "Plan, draft, and automatically publish Threads posts from one focused iOS app."
+    description:
+      "Draft, schedule, and publish to Threads from one focused iPhone app — with AI, analytics, and a clean queue."
   },
   uk: {
-    title: "Tredsy - Плануйте та публікуйте дописи в Threads",
-    description: "Плануйте, зберігайте в чернетках та автоматично публікуйте дописи в Threads з одного зручного iOS-застосунку.",
+    title: "Tredsy — планувальник дописів для Threads",
+    description:
+      "Пиши, плануй і публікуй у Threads з одного сфокусованого iPhone-застосунку — з ШІ, аналітикою й чистою чергою.",
+
+    "nav.how": "Як працює",
     "nav.features": "Можливості",
-    "nav.privacy": "Конфіденційність",
+    "nav.who": "Для кого",
+    "nav.privacy": "Приватність",
     "nav.terms": "Умови",
     "nav.delete": "Видалення даних",
     "nav.support": "Підтримка",
-    "hero.eyebrow": "Публікація в Threads з iPhone",
-    "hero.statement": "Плануйте дописи в Threads. Публікуйте у потрібний момент.",
-    "hero.lead": "Зберігайте ідеї в чернетках, додавайте медіа, плануйте дописи та публікуйте перший коментар в одному зручному iOS-застосунку.",
-    "hero.availability": "Незабаром в App Store",
-    "hero.support": "Написати в підтримку",
-    "preview.workspace": "Робочий простір",
-    "preview.month": "Червень 2026",
-    "preview.calendar": "Календар",
-    "preview.today": "Сьогодні",
-    "preview.scheduled": "Заплановано",
-    "preview.posts": "2 дописи",
-    "preview.postOne": "Нотатки про продукт",
-    "preview.textPost": "Текстовий допис",
-    "preview.postTwo": "За лаштунками",
-    "preview.mediaPost": "Допис із медіа",
-    "highlights.native": "Нативний iOS-застосунок",
-    "highlights.nativeText": "Створено для iPhone",
-    "highlights.direct": "Пряма публікація",
-    "highlights.directText": "Підключення через Threads",
-    "highlights.focus": "Фокус на головному",
-    "highlights.focusText": "Чернетки, планування, публікація",
-    "features.eyebrow": "Спокійний процес публікації",
-    "features.heading": "Усе необхідне, щоб ваша черга дописів у Threads рухалась за планом.",
-    "features.schedule": "Плануйте зрозуміло",
-    "features.scheduleText": "Оберіть дату й час, а потім переглядайте майбутні дописи у зручному календарі.",
-    "features.published": "Опубліковано",
-    "features.drafts": "Зберігайте чернетки",
-    "features.draftsText": "Записуйте незавершені ідеї та повертайтеся до них, коли текст буде готовий.",
-    "features.media": "Публікуйте з медіа",
-    "features.mediaText": "Додавайте зображення до допису та перевіряйте результат перед публікацією.",
-    "features.comment": "Додавайте перший коментар",
-    "features.commentText": "За потреби публікуйте додаткову відповідь одразу після основного допису.",
-    "workflow.eyebrow": "Просто за задумом",
-    "workflow.heading": "Від ідеї до опублікованого допису за три кроки.",
-    "workflow.connect": "Підключіть Threads",
-    "workflow.connectText": "Авторизуйте акаунт через офіційний процес входу Threads.",
-    "workflow.create": "Створіть допис",
-    "workflow.createText": "Напишіть текст, додайте медіа та перший коментар, якщо він потрібен.",
-    "workflow.publish": "Оберіть час публікації",
-    "workflow.publishText": "Публікуйте зараз, зберігайте чернетку або додавайте допис до розкладу.",
-    "support.eyebrow": "Потрібна допомога?",
-    "support.heading": "Є питання про Tredsy?",
-    "support.text": "Напишіть нам, і ми допоможемо з акаунтом або застосунком."
+
+    "hero.eyebrow": "Планування Threads з iPhone",
+    "hero.title": "Публікуй у Threads, не живучи в ньому.",
+    "hero.subhead":
+      "Пиши, плануй і публікуй у Threads з одного сфокусованого iPhone-застосунку — з ШІ, аналітикою й чистою чергою.",
+    "hero.cta": "Незабаром в App Store",
+    "hero.support": "Написати в підтримку →",
+
+    "mock.workspace": "Простір",
+    "mock.plan": "План на червень",
+    "mock.ready": "Готово",
+    "mock.scheduled": "Заплановано",
+    "mock.published": "Опубліковано",
+    "mock.draft": "Чернетка",
+    "mock.post": "Три нотатки про спокійніший процес публікації в Threads…",
+    "mock.next": "Далі",
+    "mock.count": "2 пости",
+    "mock.post2": "Нотатки про продукт на тиждень",
+
+    "how.eyebrow": "Чистіший процес публікації",
+    "how.title": "Одне місце для постів, які ще не готові вийти.",
+    "how.lead":
+      "Tredsy тримає чернетки, розклад і публікацію разом, тож планування Threads не стає ще однією вкладкою.",
+    "how.s1.t": "Напиши",
+    "how.s1.b": "Зафіксуй ідею, поки свіжа, додай медіа й до 5 коментарів-тредом.",
+    "how.s2.t": "Заплануй",
+    "how.s2.b": "Обери час виходу й дивись, як пост стоїть у чистій, впорядкованій черзі.",
+    "how.s3.t": "Опублікуй",
+    "how.s3.b": "Tredsy опублікує вчасно — навіть поки ти спиш — і скаже, як усе пройшло.",
+
+    "feat.eyebrow": "Більше, ніж планувальник",
+    "feat.title": "Пиши, знаходь і рости — в одному застосунку.",
+    "feat.ai.t": "ШІ, що пише з тобою",
+    "feat.ai.b":
+      "Згенеруй із брифу з тоном і довжиною, або перепиши, скороти, розший і переклади — навіть цілий тред.",
+    "feat.disc.t": "Знаходь і відповідай",
+    "feat.disc.b":
+      "Шукай пости в Threads за ключовим словом і відповідай, не виходячи із застосунку.",
+    "feat.stats.t": "Аналітика, що має сенс",
+    "feat.stats.b":
+      "Дивись перегляди, лайки, відповіді й репости та стеж за динамікою за 7, 30 чи 90 днів.",
+    "feat.cal.t": "Календар, а не хаос",
+    "feat.cal.b":
+      "Усе заплановане й опубліковане на одному чистому календарі — у тому порядку, в якому реально вийде.",
+
+    "who.eyebrow": "Для стабільного постингу",
+    "who.title": "Для тих, хто веде Threads як справжній канал.",
+    "who.a.t": "Автори",
+    "who.a.b": "Перетвори розкидані ідеї на стабільний ритм публікацій.",
+    "who.b.t": "Засновники",
+    "who.b.b": "Веди build in public за розкладом, без щоденної гонки.",
+    "who.c.t": "Малі команди",
+    "who.c.b": "Плануйте пости на тиждень разом — і вони вийдуть вчасно.",
+
+    "final.title": "Сплануй свій Threads. Візьми Tredsy."
   }
 };
 
 function setLanguage(language) {
   const dictionary = translations[language] || translations.en;
   document.documentElement.lang = language;
-  document.title = dictionary.title;
-  document.querySelector('meta[name="description"]').content = dictionary.description;
+
+  if (dictionary.title) {
+    document.title = dictionary.title;
+  }
+  const descriptionTag = document.querySelector('meta[name="description"]');
+  if (descriptionTag && dictionary.description) {
+    descriptionTag.content = dictionary.description;
+  }
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const translatedText = dictionary[element.dataset.i18n];
@@ -82,11 +113,12 @@ function setLanguage(language) {
 const params = new URLSearchParams(window.location.search);
 const requestedLanguage = params.get("lang");
 const savedLanguage = window.localStorage.getItem("tredsy-language");
-const language = requestedLanguage === "uk" || requestedLanguage === "en"
-  ? requestedLanguage
-  : savedLanguage === "uk"
-    ? "uk"
-    : "en";
+const language =
+  requestedLanguage === "uk" || requestedLanguage === "en"
+    ? requestedLanguage
+    : savedLanguage === "uk"
+      ? "uk"
+      : "en";
 
 window.localStorage.setItem("tredsy-language", language);
 setLanguage(language);

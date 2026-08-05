@@ -3,14 +3,21 @@
   includes, and we don't ship a build step — each HTML page hard-codes
   this header. Kept here as the canonical version so future edits can
   diff against one file before propagating to all pages.
+
+  index.html uses a variant: its nav points at on-page sections and adds
+  the EN/UA switch, since the landing is the only translated page.
 -->
 <header class="site-header">
   <div class="inner">
-    <a class="brand" href="/">Tredsy</a>
+    <a class="brand" href="/" aria-label="Tredsy home">
+      <img src="/assets/tredsy-app-icon.png" alt="" />
+      <span>Tredsy</span>
+    </a>
     <nav>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
       <a href="/delete.html">Delete data</a>
+      <a href="/support.html">Support</a>
     </nav>
   </div>
 </header>
