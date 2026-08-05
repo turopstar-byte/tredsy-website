@@ -370,10 +370,12 @@ code {
   background: linear-gradient(160deg, #26262e, #101014);
   box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.8),
     0 0 0 1px rgba(255, 255, 255, 0.02) inset;
-  /* Slight 3D tilt so the device reads as an object in space rather than
-     a flat cut-out. Kept shallow — past ~12deg the screen text starts to
-     smear and the whole thing looks like a stock template. */
-  transform: perspective(1400px) rotateY(-11deg) rotateX(3deg) rotate(-1.5deg);
+  /* Pure perspective, no flat rotation: the converging top and bottom
+     edges then come only from the 3D turn, so they read as depth. A 2D
+     rotate() on top adds skew perspective can't explain, which is what
+     makes a mockup look accidentally crooked. Kept shallow — past ~12deg
+     the screen text starts to smear. */
+  transform: perspective(1400px) rotateY(-11deg) rotateX(3deg);
 }
 
 .device-screen {
